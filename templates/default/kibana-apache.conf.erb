@@ -3,8 +3,8 @@
 
   ServerAlias <%= @params[:server_aliases].join(" ") %>
 
-  DocumentRoot <%= @params[:kibana_dir] %>
-  <Directory <%= @params[:kibana_dir] %>>
+  DocumentRoot <%= node['kibana'][:install_dir] %>
+  <Directory <%= node['kibana'][:install_dir] %>>
     Allow from all
     Options -Multiviews
   </Directory>
