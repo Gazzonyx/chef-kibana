@@ -37,4 +37,6 @@ web_app "#{node['kibana']['webserver_hostname']}-#{node['kibana']['webserver_por
   listen_address node['kibana']['webserver_listen']
   listen_port    node['kibana']['webserver_port']
   es_scheme      node['kibana']['es_scheme']
+  install_dir    node['kibana']['install_dir']
+  log_dir        node['apache']['log_dir']
 end
